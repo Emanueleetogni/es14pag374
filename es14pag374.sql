@@ -30,3 +30,26 @@ INSERT INTO PRODOTTI (codice, descrizione, prezzo, quantita, categoria, codiceFo
 VALUES (3, 'Parmigiano', 6.10, 20, 'latticini', 3);
 INSERT INTO PRODOTTI (codice, descrizione, prezzo, quantita, categoria, codiceFornitore)
 VALUES (4, 'Cereali', 5.60, 25, 'cereali', 2);
+
+--QUERY A--
+SELECT * FROM PRODOTTI ORDER BY codice ASC;
+
+--QUERY B--
+SELECT nome, indirizzo FROM FORNITORI;
+
+--QUERY C--
+SELECT indirizzo FROM FORNITORI
+WHERE nome = "mutti";
+
+--QUERY D--
+SELECT descrizione FROM PRODOTTI
+WHERE prezzo > 5;
+
+--QUERY E--
+SELECT nome, indirizzo FROM PRODOTTI INNER JOIN FORNITORI ON codiceFornitore = cod_f
+WHERE quantita < 25;
+
+--QUERY F--
+SELECT descrizione FROM PRODOTTI
+WHERE codice LIKE 1+'%';
+
