@@ -53,3 +53,8 @@ WHERE quantita < 25;
 SELECT descrizione FROM PRODOTTI
 WHERE codice LIKE 1+'%';
 
+--QUERY G--
+SELECT codiceFornitore, COUNT(*) AS NUMERO FROM PRODOTTI GROUP BY codiceFornitore;
+
+--QUERY H--
+SELECT descrizione, MAX(prezzo) AS maxPrezzo FROM PRODOTTI
