@@ -58,3 +58,23 @@ SELECT codiceFornitore, COUNT(*) AS NUMERO FROM PRODOTTI GROUP BY codiceFornitor
 
 --QUERY H--
 SELECT descrizione, MAX(prezzo) AS maxPrezzo FROM PRODOTTI
+
+--QUERY I--
+SELECT descrizione FROM PRODOTTI
+WHERE codiceFornitore = 2;
+
+--QUERY J--
+UPDATE PRODOTTI
+SET quantita = quantita + 100 WHERE codice = 1;
+
+--QUERY K--
+UPDATE PRODOTTI
+SET prezzo = prezzo * 1.05 WHERE categoria = "latticini";
+
+--QUERY L--
+INSERT INTO FORNITORI (cod_f, 'nome', 'indirizzo', 'citta')
+VALUES (4, 'DeCecco', 'via boh 1011', 'LC');
+
+--QUERY M--
+SELECT codice, descrizione FROM PRODOTTI
+WHERE prezzo >=1000 & prezzo <=5000;
